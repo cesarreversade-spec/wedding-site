@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cesar &amp; Brooke &mdash; 28 August 2027</title>
+
+  <!-- Chargement des deux polices depuis Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Notre feuille de style -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Barre de navigation fixe ===== -->
+  <header class="nav" id="nav">
+    <nav class="nav__inner">
+      <a class="nav__link" href="#wedding">Wedding</a>
+      <a class="nav__link" href="#schedule">Schedule</a>
+      <a class="nav__link" href="#quiz">Quiz</a>
+      <a class="nav__link" href="#travel">Travel</a>
+      <a class="nav__link" href="#qa">Q&amp;A</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Section 1 : ouverture en deux volets ===== -->
+    <section class="hero" id="wedding">
+
+      <div class="hero__photo">
+        <img src="images/couple/b-c7.jpg"
+             alt="Cesar and Brooke on the steps, dressed for a summer evening"
+             fetchpriority="high">
+      </div>
+
+      <div class="hero__panel">
+        <div class="hero__content">
+          <p class="hero__eyebrow">The wedding of</p>
+
+          <h1 class="hero__names">Cesar <span class="hero__amp">&amp;</span> Brooke</h1>
+
+          <div class="hero__rule" aria-hidden="true">
+            <span></span><i></i><span></span>
+          </div>
+
+          <p class="hero__date">28 August 2027</p>
+          <p class="hero__place">La Ferme de Gy &mdash; Giez, Haute-Savoie</p>
+
+          <a class="button" href="#rsvp">RSVP</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== Section 2 : Schedule =====
+         Composition en trois temps numerotes, alignes sur une seule ligne.
+         Les trois vignettes partagent un format unique : c'est cette repetition
+         qui porte la section, pas la decoration. -->
+    <section class="section" id="schedule">
+
+      <div class="section__inner">
+
+        <p class="section__eyebrow">The day</p>
+        <h2 class="section__title">Schedule</h2>
+
+        <div class="rule" aria-hidden="true">
+          <span></span><i></i><span></span>
+        </div>
+
+        <!-- Rappel du jour et du lieu. Ils figurent deja dans l'ouverture, mais
+             un invite qui arrive par une ancre ou qui revient consulter l'horaire
+             ne les a pas forcement sous les yeux. Petites capitales espacees :
+             c'est un repere, pas un titre. -->
+        <p class="daystamp">
+          <time datetime="2027-08-28">Saturday 28 August 2027</time>
+          <span class="daystamp__dot" aria-hidden="true">&middot;</span>
+          La Ferme de Gy, Giez
+        </p>
+
+        <!-- L'horaire : deux heures reliees par un filet, qui figure la duree.
+             Format 12 h a l'ecran ; les attributs `datetime` restent en 24 h,
+             c'est la forme que lisent les machines et les lecteurs d'ecran. -->
+        <p class="timing">
+          <time class="timing__hour" datetime="15:00">3:00 PM</time>
+          <span class="timing__line" aria-hidden="true"></span>
+          <time class="timing__hour" datetime="02:00">2:00 AM</time>
+        </p>
+
+        <!-- Le domaine hier et aujourd'hui, en une seule bande continue.
+             Les deux moities sont jointives et de meme format : c'est un objet
+             unique, pas deux vignettes posees cote a cote. -->
+        <figure class="era">
+
+          <div class="era__frames">
+            <img class="era__img era__img--drawn"
+                 src="images/site/dessin-ferme-historique.webp"
+                 alt="Pencil drawing of La Ferme de Gy and its carved wooden facades"
+                 width="1337" height="802" loading="lazy">
+            <img class="era__img"
+                 src="images/venue/vue-aerienne-generale.webp"
+                 alt="La Ferme de Gy from above, its gardens set for a reception"
+                 width="900" height="600" loading="lazy">
+          </div>
+
+          <figcaption class="era__captions">
+            <span class="era__label">Then</span>
+            <span class="era__label">Today</span>
+          </figcaption>
+
+        </figure>
+
+        <div class="moments">
+
+          <article class="moment">
+            <!-- CACHE DE POSITION : a remplacer par la vraie image, sous ce meme
+                 nom de fichier, pour n'avoir aucune ligne de code a retoucher. -->
+            <figure class="moment__figure">
+              <img src="images/venue/buffet-traiteur.jpg"
+                   alt="A summer buffet laid out in the open air"
+                   width="800" height="600" loading="lazy">
+            </figure>
+            <p class="moment__num">01</p>
+            <h3 class="moment__title">The table</h3>
+            <!-- Bio, local, boissons naturelles et service a volonte viennent du DEVIS
+                 de Cesar, pas du site public du traiteur, qui ne les revendique pas.
+                 A reverifier avant la mise en ligne. -->
+            <p class="moment__text">
+              Id&eacute;e&rsquo;O Traiteur, our local caterer. Everything homemade,
+              organic and in season. Natural wines and drinks flowing all night,
+              all included. Come hungry.
+            </p>
+            <a class="link" href="https://www.ideeotraiteur.com/"
+               target="_blank" rel="noopener">
+              ideeotraiteur.com <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <article class="moment">
+            <figure class="moment__figure">
+              <img src="images/couple/brooke-perform.jpg"
+                   alt="Brooke against a sunset sky, hair caught in the wind"
+                   width="1600" height="1083" loading="lazy">
+            </figure>
+            <p class="moment__num">02</p>
+            <h3 class="moment__title">The stage</h3>
+            <p class="moment__text">
+              Brooke&rsquo;s family and friends are artists. We will have the chance
+              to witness them perform through the evening &mdash; music, and more.
+            </p>
+          </article>
+
+          <article class="moment">
+            <figure class="moment__figure">
+              <img src="images/venue/honeyrunners.jpg"
+                   alt="The Honeyrunners, the band flying in from Toronto"
+                   width="909" height="681" loading="lazy">
+            </figure>
+            <p class="moment__num">03</p>
+            <h3 class="moment__title">The band</h3>
+            <p class="moment__text">
+              The Honeyrunners are flying in from Toronto &mdash; first as guests,
+              then as the band, playing live through the evening.
+            </p>
+            <a class="link"
+               href="https://open.spotify.com/artist/6sJKBtpEQZmSCSTb7LAtBZ"
+               target="_blank" rel="noopener">
+              Listen on Spotify <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ===== Section 3 : Quiz (anciennement Our Story) =====
+         Cinq questions, une par moment de notre histoire. Chaque question est
+         un bloc `.quiz` autonome : une petite video verticale a gauche, la
+         question a droite. Format compact : deux questions tiennent dans un
+         ecran, pour que les cinq ne fassent pas un defilement interminable.
+         Reglages portes par des attributs `data-` (le script n'a pas a etre
+         modifie pour ajouter une question) :
+           data-pause   : seconde ou la video s'arrete et ou les reponses apparaissent
+           data-answer  : lettre de la bonne reponse
+           data-right / data-wrong : phrase affichee selon la reponse -->
+    <section class="section section--alt" id="quiz">
+      <div class="section__inner">
+
+        <p class="section__eyebrow">How well do you know us?</p>
+        <h2 class="section__title">Quiz</h2>
+
+        <div class="rule" aria-hidden="true">
+          <span></span><i></i><span></span>
+        </div>
+
+        <p class="story__intro">
+          Five ordinary moments captured from our life together.
+          Get all five right and win!
+        </p>
+
+        <div class="quizzes">
+
+          <!-- Question 1 : la video du ponton -->
+          <article class="quiz" id="quiz-1"
+                   data-pause="9" data-answer="b"
+                   data-right="Right! Splash."
+                   data-wrong="Nope! Brooke went for a swim.">
+
+            <figure class="quiz__frame">
+              <!-- Etiquette posee sur la video : lisible sur n'importe quelle image. -->
+              <p class="quiz__tag">Quiz 1 / 5</p>
+              <!-- Video sans son : elle demarre seule des qu'elle arrive a l'ecran.
+                   `muted` : les navigateurs n'autorisent le demarrage automatique
+                   que pour une video muette.
+                   `playsinline` : sans lui, l'iPhone ouvre la video en plein ecran. -->
+              <video class="quiz__video"
+                     src="images/story/lift-to-water.mp4"
+                     poster="images/story/lift-to-water-poster.jpg"
+                     width="720" height="1280"
+                     muted playsinline preload="metadata"></video>
+
+              <!-- Bouton de secours, cache par defaut. Il n'apparait que si le
+                   telephone refuse le demarrage automatique (mode economie
+                   d'energie de l'iPhone, par exemple). -->
+              <button class="quiz__play is-gone" type="button" aria-label="Play the video">
+                <span aria-hidden="true"></span>
+              </button>
+            </figure>
+
+            <div class="quiz__body">
+              <p class="quiz__question" id="quiz-1-q">What will Cesar do next?</p>
+
+              <div class="quiz__answers">
+                <!-- Affiche tant que la video n'a pas atteint la question. -->
+                <p class="quiz__hint">Watch closely&hellip;</p>
+                <div class="quiz__choices" role="group" aria-labelledby="quiz-1-q">
+                  <button class="quiz__answer" type="button" data-choice="a">
+                    <span class="quiz__letter">A</span> Put Brooke back on land 🙂
+                  </button>
+                  <button class="quiz__answer" type="button" data-choice="b">
+                    <span class="quiz__letter">B</span> Throw Brooke in the water 😮
+                  </button>
+                </div>
+              </div>
+
+              <p class="quiz__verdict" aria-live="polite"></p>
+              <button class="quiz__replay" type="button" hidden>Watch again</button>
+            </div>
+          </article>
+
+          <!-- Question 2 : la citation. Variante `quiz--card` : pas de video, un
+               cadre sombre pleine largeur, au format paysage 16/9. Au clic sur une
+               reponse, la photo prend sa place dans le meme cadre (rien ne bouge
+               autour), puis une bulle reprend la phrase a cote de Brooke. -->
+          <article class="quiz quiz--card" id="quiz-2"
+                   data-answer="brooke"
+                   data-right="Right! Brooke, of course."
+                   data-wrong="Nope! That was Brooke.">
+
+            <div class="quiz__stage">
+              <p class="quiz__tag">Quiz 2 / 5</p>
+              <img class="quiz__reveal"
+                   src="images/story/foroncedoasisay.jpg"
+                   alt="Brooke at a hot pot table, steam rising from the pot"
+                   width="1200" height="900" loading="lazy">
+
+              <!-- La bulle : du texte HTML pose sur la photo, pas un montage
+                   incruste dans l'image. Elle reste nette sur tous les ecrans,
+                   et sa position se regle en CSS (`.quiz__bubble`). -->
+              <p class="quiz__bubble" aria-hidden="true">For once, can&rsquo;t you just do what I say!</p>
+
+              <div class="quiz__card">
+                <p class="quiz__label" id="quiz-2-q">Who said that?</p>
+                <blockquote class="quiz__quote">&ldquo;For once, can&rsquo;t you just do what I say!&rdquo;</blockquote>
+              </div>
+            </div>
+
+            <div class="quiz__choices quiz__choices--row" role="group" aria-labelledby="quiz-2-q">
+              <button class="quiz__answer" type="button" data-choice="brooke">
+                <span class="quiz__letter">A</span> Brooke
+              </button>
+              <button class="quiz__answer" type="button" data-choice="cesar">
+                <span class="quiz__letter">B</span> Cesar
+              </button>
+            </div>
+
+            <p class="quiz__verdict" aria-live="polite"></p>
+          </article>
+
+          <!-- Question 3 : l'animal prefere. Meme variante `quiz--card` que la
+               question 2. Quatre reponses : une ligne de quatre sur ordinateur,
+               deux lignes de deux sur telephone. La photo de reponse est un
+               montage des quatre photos cow1 a cow4 (images/story/cows.jpg). -->
+          <article class="quiz quiz--card" id="quiz-3"
+                   data-answer="cows"
+                   data-right="Right! Cows, forever."
+                   data-wrong="Nope! It&rsquo;s cows. Always cows.">
+
+            <div class="quiz__stage">
+              <p class="quiz__tag">Quiz 3 / 5</p>
+              <img class="quiz__reveal"
+                   src="images/story/cows.jpg"
+                   alt="Four photos of Brooke posing happily with cows in alpine meadows"
+                   width="1600" height="900" loading="lazy">
+
+              <div class="quiz__card">
+                <p class="quiz__quote" id="quiz-3-q">What is Brooke&rsquo;s favorite animal?</p>
+              </div>
+            </div>
+
+            <div class="quiz__choices quiz__choices--four" role="group" aria-labelledby="quiz-3-q">
+              <button class="quiz__answer" type="button" data-choice="horses">
+                <span class="quiz__letter">A</span> Horses
+              </button>
+              <button class="quiz__answer" type="button" data-choice="cats">
+                <span class="quiz__letter">B</span> Cats
+              </button>
+              <button class="quiz__answer" type="button" data-choice="cows">
+                <span class="quiz__letter">C</span> Cows
+              </button>
+              <button class="quiz__answer" type="button" data-choice="dogs">
+                <span class="quiz__letter">D</span> Dogs
+              </button>
+            </div>
+
+            <p class="quiz__verdict" aria-live="polite"></p>
+          </article>
+
+          <!-- Question 4 : les courses. Meme variante `quiz--card` que les
+               questions 2 et 3. Photo de reponse : montage de grocery1 a grocery3
+               en trois bandes (images/story/grocery.jpg). Par-dessus, une bulle et
+               une fleche dessinees en SVG (dessin vectoriel) : la fleche montre le
+               ventre de Brooke sur la troisieme photo. Le dessin a exactement le
+               format de la photo (1600 x 900) : les coordonnees sont celles des
+               pixels de l'image, et tout s'agrandit ou retrecit avec elle. -->
+          <article class="quiz quiz--card" id="quiz-4"
+                   data-answer="brooke"
+                   data-right="Right! Brooke, always."
+                   data-wrong="Nope! Brooke does. Always.">
+
+            <div class="quiz__stage">
+              <p class="quiz__tag">Quiz 4 / 5</p>
+              <img class="quiz__reveal"
+                   src="images/story/grocery.jpg"
+                   alt="Three photos of Brooke carrying groceries and boxes, the last one eight months pregnant"
+                   width="1600" height="900" loading="lazy">
+
+              <!-- La fleche, dessinee en SVG (dessin vectoriel) au format exact de la
+                   photo (1600 x 900) : ses coordonnees sont celles des pixels de
+                   l'image, et elle s'agrandit ou retrecit avec elle. Elle part de la
+                   bulle, remonte le long du cote droit de Brooke (sur le sol clair,
+                   ou elle se voit) et finit sur son ventre, avec une pointe en V. -->
+              <svg class="quiz__note" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+                <path class="quiz__note-arrow" d="M1440 688 C1480 590 1474 424 1354 394" />
+                <path class="quiz__note-arrow" d="M1376 380 L1354 394 L1378 410" />
+              </svg>
+
+              <!-- La bulle, en texte HTML comme celle de la question 2 : sa taille de
+                   texte reste lisible sur telephone. Posee sur le sol, sous Brooke. -->
+              <p class="quiz__bubble quiz__bubble--belly" aria-hidden="true">8&nbsp;months<br>pregnant 😬</p>
+
+              <div class="quiz__card">
+                <p class="quiz__quote" id="quiz-4-q">Who carries the groceries?</p>
+              </div>
+            </div>
+
+            <div class="quiz__choices quiz__choices--row" role="group" aria-labelledby="quiz-4-q">
+              <button class="quiz__answer" type="button" data-choice="brooke">
+                <span class="quiz__letter">A</span> Brooke
+              </button>
+              <button class="quiz__answer" type="button" data-choice="cesar">
+                <span class="quiz__letter">B</span> Cesar
+              </button>
+            </div>
+
+            <p class="quiz__verdict" aria-live="polite"></p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Section 4 : Travel ===== -->
+    <section class="section" id="travel">
+      <div class="section__inner">
+
+        <p class="section__eyebrow">Getting here</p>
+        <h2 class="section__title">Travel</h2>
+
+        <div class="rule" aria-hidden="true">
+          <span></span><i></i><span></span>
+        </div>
+
+        <figure class="travel__banner">
+          <img src="images/venue/vue-generale.webp"
+               alt="La Ferme de Gy seen from the gardens, against the mountainside"
+               width="900" height="600" loading="lazy">
+        </figure>
+
+        <div class="travel__grid">
+
+          <div class="travel__col">
+            <h3 class="card__title">La Ferme de Gy</h3>
+
+            <!-- Vignette OpenStreetMap hebergee par nous : aucun traceur, 79 Ko.
+                 Le clic ouvre l'application Maps native sur telephone. -->
+            <a class="map"
+               href="https://www.google.com/maps/search/?api=1&amp;query=45.750943,6.247674"
+               target="_blank" rel="noopener">
+              <img src="images/venue/carte-giez.webp"
+                   alt="Map showing Giez, between Lake Annecy and Faverges"
+                   width="1200" height="750" loading="lazy">
+              <span class="map__cta">Open in Google Maps <span aria-hidden="true">&rarr;</span></span>
+            </a>
+            <p class="map__credit">&copy; OpenStreetMap contributors</p>
+          </div>
+
+          <div class="travel__col">
+            <h3 class="card__title">Parking</h3>
+            <p class="card__text">
+              200 private spaces at the farm. Free, no booking, no shuttle.
+            </p>
+
+            <ul class="facts">
+              <li><span class="facts__key">Annecy</span> 30 min</li>
+              <li><span class="facts__key">Geneva</span> 1 h</li>
+              <li><span class="facts__key">Stations</span> Albertville, Annecy</li>
+              <li><span class="facts__key">Airport</span> Geneva</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="placeholder placeholder--alt" id="qa"><h2>Q&amp;A</h2></section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
